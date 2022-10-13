@@ -1,0 +1,37 @@
+<form action="/membros/save" method="POST">
+
+    <input type="hidden" value="{{membro.id}}" name="id">
+    
+    <div class="form-group">
+        <label for="txtnome">Nome:</label>
+        <input class="form-control" value="{{membro.nome}}" type="text" id="txtnome" name="nome">
+    </div>
+    <div class="form-group">
+        <label for="txtcidade">Cidade:</label>
+        <input class="form-control" value="{{membro.cidade}}" type="text" id="txtcidade" name="cidade">
+
+    </div>
+    <div class="form-group">
+        <label for="txttelefone">Telefone:</label>
+        <input class="form-control" value="{{membro.telefone}}" type="text" id="txttelefone" name="telefone">
+    </div>
+    <div class="form-group">
+        <label for="txtidade">Idade:</label>
+        <input class="form-control" value="{{membro.idade}}" type="text" id="txtidade" name="idade">
+    </div>
+    <div class="form-group">
+        <label for="txtocupacao">Ocupação:</label>
+        <input class="form-control" value="{{membro.ocupacao}}" type="text" id="txtocupacao" name="ocupacao">
+    </div>
+    <div class="form-group">
+        <label for="txtvezesqueassistiu">Quantidade de vezes que assistiu Logan:</label>
+        <input class="form-control" value="{{membro.vezesqueassistiu}}" type="text" id="txtvezesqueassistiu" name="vezesqueassistiu">
+    </div>
+    <div class="form-group">
+        <label for="txtcontribuição">O que irá doar para ajudar a bancar o salário de Hugh Jackman:</label>
+        <input class="form-control" value="{{membro.contribuicao}}" type="text" id="txtcontribuicao" name="contribuicao">
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>

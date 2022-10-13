@@ -1,0 +1,72 @@
+body{
+    flex-wrap: nowrap;
+    background-color: lightblue;
+    height: 100vh;
+    border-radius: 15%;
+    margin: auto;
+    max-width: 90%;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#menu{
+    text-align: center;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    color: blue;
+}
+
+#conteudoini{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 23px;
+    text-align: center;
+    margin-top: 5%;
+}
+
+#imghome{
+    width: 60%;
+}
+
+.imgclientes{
+    width: 17%;
+    text-align: right;
+}
+
+main{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    margin-top: 10%;
+}
+
+main > article > ul{
+    margin: auto;
+}
+
+li{
+    text-align: left;
+}
+
+section{
+    font-size: 20px;
+}
+
+#topicos{
+    font-size: 20px;
+    margin-left: 20%;
+}
+
+#texto{
+    font-size: 20px;
+}
+
+footer{
+    font-size: 15px;
+    text-align: right;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

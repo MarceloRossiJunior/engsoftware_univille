@@ -1,0 +1,12 @@
+body{
+    flex-wrap: nowrap;
+}
+img{
+    width: 30%;
+}
+p{
+    font-size: larger;
+}
+div{
+    text-align: center;
+}

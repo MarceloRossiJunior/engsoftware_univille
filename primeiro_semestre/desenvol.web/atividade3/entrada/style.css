@@ -1,0 +1,71 @@
+body {
+    margin: 15px;
+    border: 2px solid black;
+    width: 70%;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 10px;
+    border: 2px solid black;
+}
+
+h1 {
+    text-align: left;
+}
+
+#search {
+    display: flex;
+    align-self: center;
+    gap: 6px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#conteudo {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
+}
+
+aside {
+    margin: 10px;
+    border: 2px solid black;
+}
+
+section {
+    border: solid black;
+}
+
+#feed {
+    margin: 10px;
+    border: 2px solid black;
+}
+
+.email {
+    margin: 10px;
+    border: 2px solid black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+#show {
+    margin: 10px;
+    border: 2px solid black;
+}
+
+#read {
+    margin: 10px;
+    border: 2px solid black;
+}
+
+#caminho {
+    padding-top: 5%;
+}
+
+input {
+    width:70%;
+}
