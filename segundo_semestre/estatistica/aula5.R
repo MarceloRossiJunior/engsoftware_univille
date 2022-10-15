@@ -1,5 +1,5 @@
 # fatores
-S <- c ("f","m","m","m","f","m","f","m","f","f")
+S <- c("f","m","m","m","f","m","f","m","f","f")
 s <- factor(s)
 
 # data.frames
@@ -9,7 +9,7 @@ s <- factor(s)
 # criando data.frames
 Nome <- c("José Santos","Angela Dias","Mayara Costa","Lara Lins","Nicolas Barros")
 Idades <- c(17,17,16,15,15,13)
-Sexo <- c("M","F",,"F","F","F","M")
+Sexo <- c("M","F","F","F","F","F","M")
 NF <- c(92,75,81,87,92,88)
 escola <- data.frame(Nome,Idade,Sexo,NF)
 
