@@ -31,4 +31,6 @@ sum(x[x < 5]) # soma dos valores menores que 5
 scan() # entrada de dados (como de um bloco de notas) transformando em vetor
 edit() # edição de objetos existentes (vetores, data.frames, funções...)
 read.table() # ler dados de um arquivo-texto no formato de um data.frame
-dados <- readtable("c:/users/giapa/One drive/Área de Trabalho/frequencia")
+dados <- readtable("C:/Users/user/Desktop/slides_univ/2_Estatísca/
+                    frequencia-cardiaca.txt", head = TRUE, sep = ".")
+is.data.frame(dados)
