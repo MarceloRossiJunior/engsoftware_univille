@@ -64,9 +64,3 @@ for lin in range(4):
         menorarmazem = lin
 print("\t Armazem", menorarmazem+1)
 print()
-
-# e.	Qual o custo total de cada armazém
-print("Custo de cada armazem")
-for col in range(3):
-    custo = 0
-    for lin in range(4)
