@@ -4,7 +4,7 @@
 
 USE MinhaCaixa
 
-CREATE TABLE Feriado 
+CREATE TABLE Feriado
     (FeriadoCodigo  int CONSTRAINT PK_Feriado PRIMARY KEY IDENTITY(1,1),
      FeriadoNome VARCHAR(30), DiaFeriado DateTime)
 
@@ -27,12 +27,23 @@ SELECT * FROM Feriado
 SELECT ClienteNome, AgenciaCodigo, ClienteCodigo FROM Clientes, Agencias
 
 INSERT CartaoCredito (AgenciaCodigo, ContaNumero, ClienteCodigo, CartaoCodigo, CartaoLimite, CartaoExpira, CartaoCodigoSeguranca)
-    VALUES (1, '000000-1', 1, '0000-0000-0000-0000', 100000, '2025-12-31', 123)
+    VALUES (1, '002107-8', 508, '0000-0000-0000-0000', 100000, '2025-12-31', 123)
+INSERT CartaoCredito (AgenciaCodigo, ContaNumero, ClienteCodigo, CartaoCodigo, CartaoLimite, CartaoExpira, CartaoCodigoSeguranca)
+    VALUES (1, '023383-5', 945, '1111-2222-3333-4444', 200000, '2025-11-30', 132)
+INSERT CartaoCredito (AgenciaCodigo, ContaNumero, ClienteCodigo, CartaoCodigo, CartaoLimite, CartaoExpira, CartaoCodigoSeguranca)
+    VALUES (3, '104965-0', 82, '1234-1234-1234-1234', 250000, '2025-10-29', 549)
+INSERT CartaoCredito (AgenciaCodigo, ContaNumero, ClienteCodigo, CartaoCodigo, CartaoLimite, CartaoExpira, CartaoCodigoSeguranca)
+    VALUES (1, '387358-0', 580, '5555-0000-2222-0000', 90000, '2025-09-27', 999)
+INSERT CartaoCredito (AgenciaCodigo, ContaNumero, ClienteCodigo, CartaoCodigo, CartaoLimite, CartaoExpira, CartaoCodigoSeguranca)
+    VALUES (1, '677396-0', 825, '2341-2344-9874-1111', 30000, '2025-08-26', 333)
 
-
-
+UPDATE CartaoCredito SET ClienteCodigo = 508 WHERE ClienteCodigo = 1
 
 SELECT * FROM CartaoCredito
 SELECT * FROM Clientes
 SELECT * FROM Agencias
 SELECT * FROM Contas
+
+-- 3.	Faça um consulta que retorne o nome e sobrenome do cliente, seu bairro, 
+-- e os valores das suas movimentações, a data ordenando as movimentações pelas 
+-- mais recentes.
