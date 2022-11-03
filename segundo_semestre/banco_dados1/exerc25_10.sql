@@ -4,9 +4,9 @@
 
 USE MinhaCaixa
 
-CREATE TABLE Feriado
-    (FeriadoCodigo  int CONSTRAINT PK_Feriado PRIMARY KEY IDENTITY(1,1),
-     FeriadoNome VARCHAR(30), DiaFeriado DateTime)
+-- CREATE TABLE Feriado
+--    (FeriadoCodigo  int CONSTRAINT PK_Feriado PRIMARY KEY IDENTITY(1,1),
+--     FeriadoNome VARCHAR(30), DiaFeriado DateTime)
 
 INSERT Feriado (FeriadoNome, DiaFeriado) VALUES ('Carnaval', '2023-02-20')
 INSERT Feriado (FeriadoNome, DiaFeriado) VALUES ('Carnaval', '2023-02-21')
@@ -47,3 +47,12 @@ SELECT * FROM Contas
 -- 3.	Faça um consulta que retorne o nome e sobrenome do cliente, seu bairro, 
 -- e os valores das suas movimentações, a data ordenando as movimentações pelas 
 -- mais recentes.
+
+SELECT Clientes.ClienteNome, Clientes.ClienteSobrenome, Clientes.ClienteBairro,
+        Movimentos.MovimentoData, Movimentos.MovimentoValor
+FROM Clientes, Movimentos
+ORDER BY MovimentoData DESC
+
+-- 4.	Mostre o nome do cliente, sobrenome e a sua renda convertida em dolar e euro.
+
+SELECT ClienteNome, ClienteSobrenome, ClienteRendaAnual FROM Clientes
