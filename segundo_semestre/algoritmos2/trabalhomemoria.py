@@ -3,18 +3,32 @@
 
 import random
 
-memoria = [' '] * 100
+# memoria = [' '] * 100
+memoria = ['X', 'X', 'X', ' ', ' ', 'X', ' ', 'X', 'X', ' ', ' ', ' ', ' ', ' ', ' ', 'X', 'X', ' ', 'X', ' ', 'X', 'X', ' ', 'X', ' ', ' ', 'X', ' ', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', ' ', 'X', ' ', ' ', 'X', 'X', ' ', 'X', ' ', 'X', ' ', 'X', ' ', 'X', ' ', ' ', 'X', 'X', 'X', 'X', 'X', ' ', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', ' ', 'X', 'X', 'X', 'X', 'X', 'X', ' ', 'X', ' ', ' ', 'X', ' ', 'X', ' ', ' ', 'X', ' ', ' ', 'X', 'X', ' ', ' ', ' ', 'X', ' ', ' ', 'X', ' ', ' ', 'X', 'X', ' ']
 opcao = 0
 tamanho = 0
 letra = ''
-for i in range(100):
-    if(random.randint(0,11) >= 5):
-        memoria[i] = 'X'
-    else:
-        memoria[i] = ' '
+# for i in range(100):
+#    if(random.randint(0,11) >= 5):
+#        memoria[i] = 'X'
+#    else:
+#        memoria[i] = ' '
 #Aqui você deve imprimir todo o conteúdo da variável memória
+for i in range(0,20):
+    print(memoria[i], end="|")
 print()
-print(memoria)
+for i in range(20,40):
+    print(memoria[i], end="|")
+print()
+for i in range(40,60):
+    print(memoria[i], end="|")
+print()
+for i in range(60,80):
+    print(memoria[i], end="|")
+print()
+for i in range(80,100):
+    print(memoria[i], end="|")
+print()
 
 while(opcao != 4):
     #Menu do programa
@@ -31,10 +45,34 @@ while(opcao != 4):
     tamanho = int(input())
     print("Digite a letra a ser utiliada:", end=" ")
     letra = input()
+    print()
 
     if(opcao == 1):
         #Implemente aqui a lógica da primeira escolha
+        i=0
+        while i < 100:
+            if memoria[i] == " ":
+                ini = i
+                j = ini+1
+                while j < 100:
+                    if memoria[j] != " ":
+                        fim = j
+                        break
+                    j += 1
+                espaco = j - i
+                l = 0
+                while l < 100:
+                    if tamanho <= espaco:
+                        cont = ini
+                        while tamanho > 0:
+                            memoria[cont] = letra
+                            tamanho -= 1
+                            cont += 1
+                        break
+                    break
+            i += 1
         pass
+            
     else:
         if (opcao == 2):
             #Implemente aqui a lógica da melhor escolha
@@ -43,7 +81,21 @@ while(opcao != 4):
             if(opcao == 3):
                 #Implemente aqui a lógica da pior escolha
                 pass
+    for i in range(0,20):
+        print(memoria[i], end="|")
     print()
-    print(memoria)
+    for i in range(20,40):
+        print(memoria[i], end="|")
+    print()
+    for i in range(40,60):
+        print(memoria[i], end="|")
+    print()
+    for i in range(60,80):
+        print(memoria[i], end="|")
+    print()
+    for i in range(80,100):
+        print(memoria[i], end="|")
+    print()
+
 print()
 print("Compreensível. Tenha um bom dia!")
