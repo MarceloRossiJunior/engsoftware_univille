@@ -1,5 +1,7 @@
-# Desenvolver um programa na linguagem Python que implemente os algoritmos de gerenciamento de memória: 
-# Primeira Escolha, Melhor Escolha, Pior Escolha dentro de um espaço de memória com 100 posições.
+# Desenvolver um programa na linguagem Python que implemente os algoritmos 
+# de gerenciamento de memória: 
+# Primeira Escolha, Melhor Escolha, Pior Escolha dentro de um espaço de 
+# memória com 100 posições.
 
 import random
 
@@ -59,28 +61,58 @@ while(opcao != 4):
                         fim = j
                         break
                     j += 1
-                espaco = j - i
-                l = 0
-                while l < 100:
-                    if tamanho <= espaco:
-                        cont = ini
-                        while tamanho > 0:
-                            memoria[cont] = letra
-                            tamanho -= 1
-                            cont += 1
-                        break
+                espaco = fim - ini
+                if tamanho <= espaco:
+                    cont = ini
+                    while tamanho > 0:
+                        memoria[cont] = letra
+                        tamanho -= 1
+                        cont += 1
                     break
+                if tamanho > espaco:
+                    print("Não foi possível concluir a operação. Tamanho indisponível.")
             i += 1
         pass
             
     else:
         if (opcao == 2):
             #Implemente aqui a lógica da melhor escolha
+            
             pass
+        
         else:
             if(opcao == 3):
                 #Implemente aqui a lógica da pior escolha
+                i=0
+                while i < 100:
+                    if memoria[i] == " ":
+                        ini = i
+                        j = ini+1
+                        omaior = 0
+                        while j < 100:
+                            if memoria[j] != " ":
+                                fim = j
+                                break
+                            j += 1
+                        espaco = fim - ini
+                        if espaco > omaior:
+                            omaior = espaco
+                        else:
+                            if tamanho <= espaco:
+                                l = 0
+                                cont = ini
+                                while tamanho > 0:
+                                    memoria[cont] = letra
+                                    tamanho -= 1
+                                    cont += 1
+                                break
+                            else:
+                                print("Não é possível realizar essa operação.")
+                                print()
+                            break
+                    i += 1
                 pass
+
     for i in range(0,20):
         print(memoria[i], end="|")
     print()
