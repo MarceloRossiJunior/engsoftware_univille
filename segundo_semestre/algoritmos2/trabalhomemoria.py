@@ -78,7 +78,7 @@ while(opcao != 4):
 
         else:
             if (opcao == 2):
-                # melhor
+                # melhor alternativa
                 pass
                 if tamanho > espaco:
                     print("Sem espaço. Tente um arquivo menor.")
@@ -87,7 +87,7 @@ while(opcao != 4):
             
             else:
                 if(opcao == 3):
-                    # pior
+                    # pior alternativa
                     pass
                     if tamanho > espaco:
                         print("Sem espaço. Tente um arquivo menor.")
