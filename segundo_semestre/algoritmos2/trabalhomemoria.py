@@ -78,9 +78,22 @@ while(opcao != 4):
 
         else:
             if (opcao == 2):
-                # melhor alternativa
+                i=0
+                omenor = 100
+                omenorini = 0
+                while i < 100:
+                    if memoria[i] == " ":  # procurando um lugar vazio
+                        ini = i            # achei um lugar vazio
+                        j = ini+1          # procurando até onde vai o lugar vazio
+                        while j < 100:
+                            if memoria[j] != " ":  # encontrei até onde vai o lugar vazio
+                                fim = j
+                                espaco = fim - ini
+                                break
+                            j += 1
+                    i += 1
                 pass
-                if tamanho > espaco:
+                if tamanho > omenor:
                     print("Sem espaço. Tente um arquivo menor.")
                     print()
                 pass
