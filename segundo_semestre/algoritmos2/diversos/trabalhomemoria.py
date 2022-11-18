@@ -80,7 +80,6 @@ while(opcao != 4):
             if (opcao == 2):
                 i=0
                 omenor = 100
-                omenorini = 0
                 while i < 100:
                     if memoria[i] == " ":  # procurando um lugar vazio
                         ini = i            # achei um lugar vazio
@@ -89,10 +88,22 @@ while(opcao != 4):
                             if memoria[j] != " ":  # encontrei até onde vai o lugar vazio
                                 fim = j
                                 espaco = fim - ini
-                                break
+                                i = j  # continuo procurando a partir da casa depois do lugar vazio
+                                if espaco >= tamanho:  # se o espaco couber o tamanho
+                                    if espaco <= omenor:  #  se o espaco for o menor
+                                        omenor = espaco
+                                        omenorini = ini   # local inicial do menor espaco
+                                    break
                             j += 1
                     i += 1
-                pass
+                    
+                if tamanho <= omenor:
+                    cont = omenorini  #  ocupando o espaco
+                    while tamanho > 0:  # enquanto tiver dado pra ser armazenado
+                        memoria[cont] = letra  # coloca a letra na memoria
+                        tamanho -= 1  # diminui um dado
+                        cont += 1  # vai um espaco pra frente pra imprimir
+                    pass
                 if tamanho > omenor:
                     print("Sem espaço. Tente um arquivo menor.")
                     print()
@@ -100,8 +111,32 @@ while(opcao != 4):
             
             else:
                 if(opcao == 3):
-                    # pior alternativa
-                    pass
+                    i=0
+                    omaior = 0
+                    while i < 100:
+                        if memoria[i] == " ":  # procurando um lugar vazio
+                            ini = i            # achei um lugar vazio
+                            j = ini+1          # procurando até onde vai o lugar vazio
+                            while j < 100:
+                                if memoria[j] != " ":  # encontrei até onde vai o lugar vazio
+                                    fim = j
+                                    espaco = fim - ini
+                                    i = j  # continuo procurando a partir da casa depois do lugar vazio
+                                    if espaco >= tamanho:  # se o espaco couber o tamanho
+                                        if espaco >= omaior:  #  se o espaco for o maior
+                                            omaior = espaco
+                                            omaiorini = ini   # local inicial do maior espaco
+                                        break
+                                j += 1
+                        i += 1
+                        
+                    if tamanho <= omaior:
+                        cont = omaiorini  #  ocupando o espaco
+                        while tamanho > 0:  # enquanto tiver dado pra ser armazenado
+                            memoria[cont] = letra  # coloca a letra na memoria
+                            tamanho -= 1  # diminui um dado
+                            cont += 1  # vai um espaco pra frente pra imprimir
+                        pass
                     if tamanho > espaco:
                         print("Sem espaço. Tente um arquivo menor.")
                         print()
